@@ -1,0 +1,144 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+#draw {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* da ne blokira klikove */
+    z-index: 6;
+} /* u sustini da pokriva ceo ekran i da se nalazi iznad pozadine*/
+
+.pozadina {
+  position: relative;
+  z-index: 5;
+  height: 100vh; 
+  background-image: url("pozadina4.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+} /* da slika zauzima ceo ekran  i uvek popunjava prostor*/
+
+.gif {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -80px;
+  width: min(700px, 90vw);
+  height: auto;
+  pointer-events: none; 
+} /* gif pozicija, tj da je u centru */
+
+.gif-text {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-52%, -180%); 
+
+  color:#8b2020;
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  pointer-events: none;
+  font-family: Helvetica, Arial, sans-serif;
+} /* ovo sam prvobitno isprobala ali sam na kraju stavila drugi gif ali mozda na kraju ipak iskoristim ovo  */
+
+.meni {
+  position: absolute;       
+  top: 5px;                
+  width: 100%;
+  border-top: 2px solid #8b2020;
+  border-bottom: 2px solid #8b2020;
+  padding: 8px 0;
+  text-align: center;
+  margin: 20px 0;
+   z-index: 10;
+}
+
+.meni a {
+  margin: 0 70px;
+  text-decoration: none;
+  color: #8b2020;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.meni a:hover {
+  color: black;
+}
+
+/*about stranica*/
+body {
+    background-color: #cee4f9;
+}
+
+.about {
+    position: relative;
+    width: 500px;
+    margin 150px auto 0;
+    text-align: center;
+}
+
+.about-gif {
+    width: 900px;
+    display: block;
+    margin-top: 50px;
+    margin-left: -100px;
+    
+}
+
+.about-text {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-family: Helvetica, Arial, sans-serif;
+    color: #8b2020;
+    width: 250px;
+    font-size: 20px;
+    font-weight: 550;
+    
+}
+
+/*portfolioo*/
+
+.portfolio {
+  position: absolute;
+  bottom: 20px;     
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 600px;       
+}
+
+.radovi {
+
+  width: 400px;
+  margin: 0 20px;
+  transition: transform 0.2s;
+}
+
+.radovi:hover {
+  transform: scale(1.15);
+}
+
+body {
+  overflow: hidden;
+}
+
+.portfolio-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  color: #8b2020;
+}
